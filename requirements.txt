@@ -5,3 +5,6 @@ openpyxl
 xlrd
 scikit-learn
 matplotlib
+ipykernel
+jupyter
+seaborn
