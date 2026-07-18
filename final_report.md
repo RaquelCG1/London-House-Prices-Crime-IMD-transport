@@ -63,6 +63,7 @@ https://data.london.gov.uk/dataset/recorded_crime_summary
 ### 3. English Indices of Multiple Deprivation (IMD)
 
 - **Source:** UK Government
+- **Level:** LSOA
 - **Year:** 2019
 
 The IMD provides an official measure of relative deprivation across England using indicators covering income, employment, education, health, crime, housing and the living environment.
@@ -78,6 +79,7 @@ https://www.gov.uk/government/statistics/english-indices-of-deprivation-2019
 ### 4. Public Transport Accessibility Levels (PTAL)
 
 - **Source:** London Datastore
+- **Level:** LSOA
 - **Year:** 2015
 
 PTAL measures accessibility to London's public transport network and is widely used as an indicator of transport connectivity.
