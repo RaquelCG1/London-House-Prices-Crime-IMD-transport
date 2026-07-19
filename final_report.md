@@ -131,9 +131,15 @@ The exploratory analysis began by examining the structure of each dataset, inclu
 
 Summary statistics and distribution plots were used to understand the distributions of the principal numerical variables. House prices and crime counts showed substantial variation across London, with positively skewed distributions resulting from a relatively small number of neighbourhoods exhibiting exceptionally high values. In contrast, deprivation scores displayed a more balanced distribution, while public transport accessibility showed moderate positive skewness.
 
-Boxplots and distribution plots identified several outliers, particularly for house prices, crime and transport accessibility. The highest house prices were concentrated in central London boroughs such as Kensington and Chelsea and Westminster, while the highest crime levels were also observed in Westminster, reflecting the concentration of commercial activity, tourism and major transport hubs. As these values represent genuine characteristics of the London housing market rather than data entry errors, they were retained for subsequent analysis.
+![hist](pictures/hist.png)
 
-Correlation analysis was performed to explore the relationships between the principal variables. A moderate negative relationship was observed between house prices and deprivation, indicating that more deprived neighbourhoods generally have lower property values. Public transport accessibility showed a weak positive relationship with house prices, while total crime exhibited only a weak linear relationship. The relatively weak association between crime and house prices is likely influenced by central London neighbourhoods, particularly Westminster, where both property values and recorded crime levels are exceptionally high. These observations provide useful context for the statistical modelling undertaken in the later stages of the project.
+boxplots highlight several outliers, particularly for house prices, crime and transport accessibility. The highest house prices were concentrated in central London boroughs such as Kensington and Chelsea and Westminster, while the highest crime levels were also observed in Westminster, reflecting the concentration of commercial activity, tourism and major transport hubs. As these values represent genuine characteristics of the London housing market rather than data entry errors, they were retained for subsequent analysis.
+
+![box_plots](pictures/boxplots.png)
+
+Correlation analysis was performed to explore the relationships between the principal variables. A moderate negative relationship was observed between house prices and deprivation, indicating that more deprived neighbourhoods generally have lower property values. Public transport accessibility showed a weak positive relationship with house prices (r = 0.18), while total crime exhibited almost no linear relationship (r = 0.05). The relatively weak association between crime and house prices is likely influenced by central London neighbourhoods, particularly Westminster, where both property values and recorded crime levels are exceptionally high. These observations provide useful context for the statistical modelling undertaken in the later stages of the project.
+
+![alt text](pictures/corr_mtx.png)
 
 <div style="page-break-after: always;"></div>
 
