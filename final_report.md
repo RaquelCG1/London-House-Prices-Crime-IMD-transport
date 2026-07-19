@@ -74,8 +74,6 @@ https://www.gov.uk/government/statistics/english-indices-of-deprivation-2019
 
 ---
 
-<div style="page-break-after: always;"></div>
-
 ### 4. Public Transport Accessibility Levels (PTAL)
 
 - **Source:** London Datastore
