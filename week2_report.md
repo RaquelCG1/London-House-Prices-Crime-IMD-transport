@@ -113,3 +113,82 @@ The regression model was statistically significant (p < 0.001). On average, each
 Overall, the correlation and regression analyses produced consistent results. Public transport accessibility was positively associated with house prices, but the relationship was relatively weak. This suggests that while transport accessibility contributes to property values, other neighbourhood characteristics such as deprivation and crime are also likely to play an important role.
 
 Improving public transport accessibility may contribute to higher property values, but transport alone is unlikely to transform neighbourhood housing markets. Policymakers and urban planners should therefore consider transport investment alongside broader regeneration initiatives, including improvements in safety, local services and neighbourhood quality.
+
+
+# Index of Multiple Depravation, IMD (2019) and House Prices Across London LSOAs (2022)
+
+This analysis investigates whether neighbourhoods with indicators of higher depravation tend to have higher median house prices across London LSOAs.
+
+## Exploratory Data Analysis
+
+Descriptive statistics and a scatterplot showed that IMD is negatively skewed with median house prices.
+Regarding the scatter plot, across all London LSOAs, total crime had a negative correlation with median house price, meaning that as house prices increase, IMD scores tend to decrease. This indicates that more expensive areas generally experience lower levels of deprivation.
+It can be inferred that deprivation alone is not a strong predictor of house prices.
+Importantly: most observations within our data set lie between approximately:
+- £250,000–£1,000,000 house prices 
+- IMD scores of 3–48
+- A large number of high values were identified as outliers by the scatterplot.
+
+<p align="center">
+  <img src="IMD_report_figures/scatter.png" width="60%">
+</p>
+
+
+## Hypothesis Testing
+
+### Hypothesis: Do areas with lower levels of deprivation, as measured most comprehensively by their IMD score, have higher house prices?
+
+The One-Tailed Two-Sample Welch's t-Test indicated a statistically significant difference between the two groups (U = 561,887.5, p < 0.001).
+
+<p align="center">
+  <img src="IMD_report_figures/box.png" width="50%">
+</p>
+
+The low deprivation group has higher values overall, indicated by the fact that the median for the low deprivation group is noticeably higher than for the high deprivation group. Therefore it appears that the typical value of the measured outcome is greater among the low deprivation group.
+The low deprivation group shows much greater variability. 
+
+The box (interquartile range, IQR) for the low deprivation group is taller, meaning the middle 50% of values are more spread out, whereas the high deprivation group has a narrower box, indicating values are more tightly clustered around the median.
+
+Both groups are strongly right-skewed and both box plots have many outliers above the upper whisker. This skew is especially significant in the low deprivation group.
+
+
+## Correlation and Regression Analysis
+
+### Pearson Correlation
+
+Pearson's correlation coefficient was calculated to measure the strength and direction of the linear relationship between IMD scores and median house prices across London LSOAs.
+
+A moderate negative correlation was found (r = -0.3446, p-value = 9.6920 × 10⁻¹³³, effectively 0) which indicates that neighbourhoods with better public transport accessibility tend to have higher house prices.
+
+<p align="center">
+  <img src="IMD_report_figures/pearson.png" width="50%">
+</p>
+
+## Conclusion
+
+#### A. For Homebuyers
+- Deprivation should be considered **alongside other factors** when purchasing property.
+- More deprived neighbourhoods may offer **lower purchase prices** and **greater affordability**.
+- Buyers should also evaluate schools, transport links, crime rates, healthcare access and future regeneration plans.
+- Lower prices may reflect broader socioeconomic conditions rather than simply representing "good value."
+
+#### B. For Investors
+
+Potential opportunities:
+- Lower acquisition costs in deprived areas.
+- Potential capital appreciation where regeneration programmes are planned.
+- Higher rental yields may be achievable because purchase prices are lower.
+
+Potential risks:
+- Slower capital growth.
+- Greater market uncertainty.
+- Higher tenant turnover or management costs in some locations.
+
+#### C. For Local Authorities and Planners
+The findings provide evidence that deprivation is associated with lower property values.
+
+Policy implications include:
+- Regeneration initiatives to tackle deprivation should be prioritised in highly deprived neighbourhoods.
+- Services in transport, education and healthcare should be improved to increase neighbourhood attractiveness.
+- Housing affordability **alongside** deprivation should be monitored to ensure that regeneration does not unintentionally displace existing residents through rapid increases in property values.
+- **Be aware of outliers such as Westminster:** This borough should be treated as an outlier as its profile in terms of socio-economic factors and house pricing 
