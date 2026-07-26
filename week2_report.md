@@ -191,4 +191,51 @@ Policy implications include:
 - Regeneration initiatives to tackle deprivation should be prioritised in highly deprived neighbourhoods.
 - Services in transport, education and healthcare should be improved to increase neighbourhood attractiveness.
 - Housing affordability **alongside** deprivation should be monitored to ensure that regeneration does not unintentionally displace existing residents through rapid increases in property values.
-- **Be aware of outliers such as Westminster:** This borough should be treated as an outlier as its profile in terms of socio-economic factors and house pricing 
+- **Be aware of outliers such as Westminster:** This borough should be treated as an outlier as its profile in terms of socio-economic factors and house pricing
+
+---
+
+# Totals Analysis and Statistical Inference Report
+
+### Task 1
+Generally house prices are heavily right-skewed (skewness = 5.24) with most areas clustering around £420k–£683k mark, but a small number of very expensive areas (max £6.4m) pull the mean up. A similar pattern for crime was noted (skewness = 17.5), driven by a few high-crime outliers.
+
+IMD Score is close to normally distributed (skewness = 0.38) but deprivation is more evenly spread across London than price or crime are.
+
+![Distributions](totals_data_figs/univariate_distributions.png)
+
+**Boxplot Visualisation**
+![Boxplot](totals_data_figs/univariate_boxplots.png)
+
+### Task 2
+**Hypothesis:** Areas with higher deprivation have significantly lower median house prices than areas with lower deprivation.
+- Null Hypothesis: there is no difference in mean house price between high and low-deprivation areas.
+- Alternative hypothesis: mean house price differs between high and low-deprivation areas.
+  
+- High-deprivation areas: mean price £499,423
+- Low-deprivation areas: mean price £736,353
+- Difference: -£236,930
+
+Therefore, we have to reject the null hypothesis.
+
+**T-Test IMD Price**
+![ttest](totals_data_figs/ttest_imd_price.png)
+
+### Task 3
+The strongest correlation was identified to be between Total Crime and Average PTAI. This could indicate busier/better-connected areas see more crime, potentially due to higher footfall creates more opportunity. However it is significant to note that the higher footfall should not be seen as causation, since crime has various other factors and triggers.
+
+![Correlation Matrix](totals_data_figs/correlation_heatmap.png)
+
+**Linear Regression Analysis**
+![Regression](totals_data_figs/regression_plot.png)
+
+### Conclusion
+The most notable conclusion is that crime is more tied to transport accessibility/population than to house price, if the problem framing involves crime, transport access is a more useful lever/predictor than house price is.
+
+The City of London outlier is worth flagging as a limitation in this link as it behaves atypically due to its small residential base. It was kept in the datasets for the analysis of outlier status.
+
+Considering the entirety of the above report, a key recommendation would be that there are limited links to overall crime to house prices. However, where potential infrastructure spending is considered; alongside transport links, deprivation reduction, and new-build housing - safety measures should be considered. Such as additional street lighting, CCTV, on-site security personnel, multi-step access areas and harm reduction schemes.
+
+These schemes could positively impact house prices in areas where a correlation of higher crime/more transport/higher deprivation are, or could be, present.
+
+Please note that none of this data includes the rental market. This is a potential future consideration where the effects of gentrification, or lack of, in real-terms of infrastructure spenditure such as transport may impact faster-fluctuating markets.
