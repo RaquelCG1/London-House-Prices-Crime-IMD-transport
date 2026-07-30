@@ -29,7 +29,7 @@ Our goal is to explore these questions and find neighbourhoods that offer the be
 
 ---
 
-## Data Exploration and Analysis (inc briefly on collection)
+## Data Exploration and Analysis
 
 ### Where We Got the Data (Collection)
 We gathered data for approximately 4,800 small neighbourhoods in London (called LSOAs) from four main sources:
@@ -87,25 +87,3 @@ To explore our findings visually, you can view our interactive Tableau dashboard
 4. TfL Public Transport Accessibility Levels (PTAL, 2015): https://data.london.gov.uk/dataset/public-transport-accessibility-levels
 5. ONS Lower Layer Super Output Areas (December 2011) Boundaries EW BFC V3 (used for Tableau mapping): https://geoportal.statistics.gov.uk/datasets/ons::lower-layer-super-output-areas-december-2011-boundaries-ew-bfc-v3/about
 
----
-
-## Appendices
-
-### Visualisation Guide
-
-We used three main types of visualisations to help explain our data story:
-
-#### 1. Univariate Distributions (Histograms)
-* **What is it?** A chart showing how many neighbourhoods fall into different price, crime, and deprivation ranges.
-* **Why we chose it:** It easily shows that house prices and crime are "right-skewed" (most areas are relatively cheap/safe, but a few are extremely expensive/dangerous).
-* **Figures used:**
-
-#### 2. Scenario Scatter Plots (Crime vs. Price)
-* **What is it?** A graph comparing crime and house prices under different scenarios.
-* **Why we chose it:** It visually demonstrates the relationship between variables.
-* **Figures used:**
-
-#### 3. Correlation Heatmap
-* **What is it?** A color-coded grid showing how strongly different variables are related to each other.
-* **Why we chose it:** It lets stakeholders instantly see which factors have positive relationships (blue/green) and which have negative relationships (red) with house prices.
-* **Figure used:**
