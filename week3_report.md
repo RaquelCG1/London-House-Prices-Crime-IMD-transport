@@ -45,6 +45,12 @@ Before we could compare them, we had to fix a few issues:
 - **City of London:** We removed the City of London because it has its own police force, so crime data was missing.
 In the end, we had a clean dataset of **4,757 neighbourhoods**.
 
+### Exploring the Data
+
+Firstly, we explored the data using descriptive statistics and visualisations to understand the distribution of each variable, identify outliers and examine potential relationships between house prices, crime, deprivation and public transport accessibility.
+
+We then carried out a series of statistical analyses, including hypothesis testing, correlation analysis and linear regression, to investigate whether neighbourhood characteristics were significantly associated with house prices. These analyses allowed us to quantify both the strength and direction of the observed relationships.
+
 ---
 
 ## Results and Findings
@@ -53,7 +59,8 @@ In the end, we had a clean dataset of **4,757 neighbourhoods**.
 Neighbourhoods with lower deprivation (less poverty) have significantly higher house prices. The average house price in less-deprived areas is around **£736,000**, compared to **£499,000** in highly deprived areas. 
 
 ### 2. Transport and House Prices
-Having good transport links definitely increases house prices. Our analysis showed that a one-point increase in transport accessibility (PTAI score) increases the average house price by about **£5,834**.
+
+We found a **statistically significant positive relationship** between transport accessibility and house prices. However, the relationship was relatively weak, indicating that transport accessibility alone explains only a small proportion of the variation in property values. On average, a one-point increase in transport accessibility (PTAI) was associated with an increase of approximately **£5,834** in median house prices.
 
 ### 3. Crime and House Prices
 This was our most interesting finding. At first glance, total crime seemed to have almost no effect on house prices. But when we looked closer, we found two reasons why:
