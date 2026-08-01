@@ -1,64 +1,80 @@
-# Understanding What Drives House Prices Across London
+# London House Prices: A Visual Data Story
 
-London house prices vary considerably between neighbourhoods, making it difficult for homebuyers, investors and policymakers to understand what factors influence property values. While transport links, crime levels and deprivation are all thought to affect housing prices, their relative importance is not always clear. We analysed neighbourhood-level data across London to find out.
+This visual story shows how geography, poverty, crime, and transport affect London house prices.
 
-## House Prices Across London
-We start with the geographical distribution of house prices, crime, deprivation and transport availability across London.
+---
 
-![maps](maps.png)
+## 1. The London Map
+First, let's see how our main factors are spread geographically across London.
 
-The maps reveal clear geographical patterns across London. House prices are highest in central and western neighbourhoods, while areas with the best transport accessibility are concentrated around central London and major transport corridors. At the same time, deprivation is generally lower in the most expensive areas, suggesting that socioeconomic conditions may play an important role in determining property values.
+![Map of London](maps.png)
 
-## Does crime really reduce house prices?
+* **Key Takeaway:**
+  - Red areas show higher house prices, more crime, and more poverty (deprivation).
+  - For public transport, green is best, and red is worst.
+  - Expensive houses and best transport are in the center, poverty is higher in East/South-East, and crime clusters in busy central hubs.
 
-![alt text](02_scenario_scatter_crop.png)
+---
 
-Surprisingly, the answer isn't straightforward. Looking at all London neighbourhoods, crime appears to have almost no relationship with house prices. Several central London areas combine high crime levels with very high property values, reducing the overall correlation (for example Westminster, where crime is high because of tourism and commercial activity rather than residential issues). After these influential areas are excluded, the relationship becomes more clearly negative, suggesting that crime is associated with lower house prices in most neighbourhoods.
+## 2. Comparing the Totals
+Which factor has the strongest link to house prices?
 
+![Correlation Heatmap of Totals](totals_data_figs/correlation_heatmap.png)
 
-## If crime isn't the whole story, could transport explain the difference?
+* **Key Takeaway:**
+  - **Poverty (IMD, -0.34):** The strongest factor. Higher poverty relates to lower house prices.
+  - **Transport (PTAI, +0.18):** Weak positive link. Better transport adds some value.
+  - **Total Crime (+0.05):** Shows almost no link. (Let's see why this is misleading below).
 
-<table>
-<tr>
-<td width="50%">
+---
 
-![PTAI Scatter](transport_report_figures/scatter.png)
+## 3. Deprivation (Poverty) and House Prices
+To justify our claim that poorer areas have cheaper houses, we zoom in on deprivation.
 
-</td>
-<td width="50%">
+![Scatter Plot: House Price vs. IMD Score](IMD_report_figures/scatter.png)
 
-![PTAI Boxplot](transport_report_figures/boxplot.png)
+* **Key Takeaway:**
+  - Clear downward trend: more deprivation (moving right) equals cheaper house prices (moving down).
 
-</td>
-</tr>
-</table>
+We confirm this strength with the correlation matrix:
 
-Better transport accessibility is associated with higher house prices, but the relationship is weaker than many people might expect. The scatter plot shows a weak positive trend, while the boxplot highlights the practical difference between neighbourhoods with low and high transport accessibility: the median house price increases from approximately £500,000 in the lowest quartile of PTAI to around £585,000 in the highest quartile. Together, these visualisations suggest that transport adds value, but is only one of several factors influencing house prices.
+![IMD Pearson Correlation Matrix](IMD_report_figures/Pearson.png)
 
-## Which factor has the greatest influence?
+* **Key Takeaway:**
+  - The correlation is **-0.3446**, confirming a statistically significant negative link.
 
-<p align="center">
-  <img src="IMD_report_figures/scatter.png" width="60%">
-</p>
+---
 
-Among all the variables analysed, deprivation showed the strongest relationship with house prices. Neighbourhoods with higher deprivation consistently had lower property values, indicating that wider socioeconomic conditions play a greater role than either crime or transport alone.
+## 4. Crime and House Prices
+Total crime stats are misleading because of spatial outliers:
 
-## Bringing Everything Together
+![Crime vs. House Prices Scenarios](crime_report_figures/02_scenario_scatter.png)
 
-House prices cannot be explained by a single neighbourhood characteristic. While transport accessibility adds value and crime influences prices in some areas, deprivation emerged as the strongest overall indicator of property values. Decisions about housing, regeneration and investment should therefore consider these factors together rather than relying on one measure alone
+* **Key Takeaway:**
+  - **Westminster Outlier:** Westminster has extreme crime (tourists) and extreme prices. This distorts the whole London average (Panel A).
+  - **Real Trend:** Excluding Westminster and Kensington & Chelsea (Panel B) reveals that higher crime actually relates to lower house prices.
 
-## Recommendations
-**For homebuyers**
+Also, different types of crime have different impacts:
 
-Don't rely solely on transport accessibility when choosing where to buy. Consider deprivation, crime and future regeneration plans alongside affordability.
+![Crime Category Heatmap](crime_report_figures/05_correlation_heatmap.png)
 
-**For investors**
+* **Key Takeaway:**
+  - **Violence Against the Person (-0.30):** Has the strongest negative link to house prices.
+  - **Theft (+0.10):** Positive link because high-value thefts happen in wealthy shopping districts.
 
-Neighbourhoods benefiting from transport improvements may present investment opportunities, particularly where regeneration is also planned.
+---
 
-**For local authorities**
+## 5. Transport and House Prices
+Finally, let's check how public transport accessibility (PTAI) connects to prices.
 
-Transport investment should be accompanied by wider regeneration initiatives, including improvements in safety, local services and neighbourhood quality, to maximise long-term benefits.
+![Transport vs. House Prices](transport_report_figures/scatter.png)
 
-Understanding how transport, deprivation and crime interact can support more informed decisions by homebuyers, investors and policymakers when evaluating London's neighbourhoods.
+* **Key Takeaway:**
+  - Weak upward trend: better transport access gives a price premium, but it is not the main driver of property values.
 
+---
+
+## 6. Conclusion
+- **Poverty (deprivation)** is the main visual driver of lower house prices.
+- **Safety from violent crime** is highly valued, while total crime stats are distorted by central London shopping hubs.
+- **Good transport** is a nice perk, but it does not outweigh the effects of safety and poverty.
